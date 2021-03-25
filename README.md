@@ -1,0 +1,1 @@
+# dotnetcore-rabbitmq-example
