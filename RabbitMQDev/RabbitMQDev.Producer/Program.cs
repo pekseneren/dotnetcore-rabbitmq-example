@@ -14,7 +14,7 @@ namespace RabbitMQDev.Producer
 
             Random rand = new Random();
 
-            for (int i = 0; i < rand.Next(6); i++)
+            for (int i = 0; i < rand.Next(1, 6); i++)
             {
                 items.Add(new Item { Id = i, Level = rand.Next(100), Name = names[rand.Next(names.Length)], StashCode = stashCodes[rand.Next(stashCodes.Length)] });
             }

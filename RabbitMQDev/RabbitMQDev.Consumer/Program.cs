@@ -10,11 +10,19 @@ namespace RabbitMQDev.Consumer
     {
         static void Main(string[] args)
         {
-            new RabbitMQConsumer().Consume("item-stash-1");
-            new RabbitMQConsumer().Consume("item-stash-2");
+            
+            var consumer = new RabbitMQConsumer();
+            consumer.Consume("item-stash-1");;
 
-            Console.WriteLine("Type to exit...");
+            var consumer2 = new RabbitMQConsumer();
+            consumer2.Consume("item-stash-2");
+
+            Console.WriteLine("Type to exit any time...");
+
             Console.Read();
+
+            consumer.Dispose();
+            consumer2.Dispose();
         }
     }
 }
